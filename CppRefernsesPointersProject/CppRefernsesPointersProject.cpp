@@ -45,6 +45,13 @@ int main()
     */
     int x = 10;
     int y = 20;
+    int* px = &x;
+    int* py = &y;
+
+    cout << px << " " << py << "\n";
+    cout << py - px << "\n";
+
+    /*
     cout << x << " " << y << "\n";
     swap(x, y);
     cout << x << " " << y << "\n";
@@ -60,9 +67,17 @@ int main()
     int* pint;
     pint = new int[size];
 
+    for (int i = 0; i < size; i++)
+        pint[i] = i + 1;
+    
+    pint[3] = 10;
+
+    *(pint + 3) = 20;
+
     delete[] pint;
 
     pint = &i;
+    */
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
